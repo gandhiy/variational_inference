@@ -1,2 +1,5 @@
-# variational_inference
-testing bed for variational inference methods
+# Variational Inference Methods and other Stuff
+
+## VAE
+
+
