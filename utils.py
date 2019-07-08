@@ -9,9 +9,7 @@ def sampling(args):
     batch = K.shape(mu)[0]
     dim = K.int_shape(mu)[1]
     eps = K.random_normal(shape=(batch, dim))
-    return mu + K.exp(0.5*sig)*eps
-
-
+    return mu + sig*eps
 
 class plotter:
     def __init__(self, images, labels):
@@ -23,10 +21,3 @@ class plotter:
             plt.imshow(255 - self.images[i], cmap='binary')
         else:
             raise ValueError("index too high")
-
-def same_conv(c):
-    """ 
-     PARAMETERS:
-     c - number of channels
-    """
-    return Conv2D(c, (3,3), activation='relu', padding='same')
