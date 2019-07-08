@@ -6,7 +6,7 @@ The first one, `linear_vae`, is based on a 784 array representation of the MNIST
 
 The encoder takes the input and outputs two values, $ \mu $ and $ \sigma $. Then, $ \mu $ and $ \sigma $ are sampled from using the [reparameterization trick](https://arxiv.org/pdf/1312.6114.pdf).
 
-$$ z = \mu + \sigma * \epsilon \text{ where } \epsilon \in N(0,1) $$
+\( z = \mu + \sigma * \epsilon \text{ where } \epsilon \in N(0,1) \)
 
 The decoder is then trained to create the original sample from the sample z. 
 
